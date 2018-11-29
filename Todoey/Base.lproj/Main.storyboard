@@ -12,6 +12,7 @@
         <!--Todoey -->
         <scene sceneID="Lxs-ew-bFn">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fd5-8o-i3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="gDo-Dd-YVg" customClass="TodoListViewController" customModule="Todoey" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jOL-NR-gDe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -32,9 +33,15 @@
                             <outlet property="delegate" destination="gDo-Dd-YVg" id="BMY-cm-COb"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Todoey " id="G71-3U-seM"/>
+                    <navigationItem key="navigationItem" title="Todoey " id="G71-3U-seM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="swy-dt-pGW">
+                            <color key="tintColor" red="0.48581271700000001" green="0.91764705879999997" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="TodoButtonPress:" destination="gDo-Dd-YVg" id="Ozf-94-s0r"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fd5-8o-i3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="602" y="-166"/>
         </scene>
